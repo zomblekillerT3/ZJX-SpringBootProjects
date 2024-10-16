@@ -1,0 +1,15 @@
+#spring.datasource.driver-class-name=com.mysql.cj.jdbc.Driver
+#spring.datasource.username=root
+#spring.datasource.password=qyf123456
+#spring.datasource.url=jdbc:mysql://127.0.0.1:3306/learnTest1
+mybatis:
+  config-location: classpath:mybatis-config.xml  #全局配置文件位置
+  mapper-locations: classpath:mapper/*.xml  #sql映射文件位置
+  type-aliases-package: zjx.maven.project.learntest1.model
+
+spring:
+  datasource:
+    url: jdbc:mysql://localhost:3306/learnTest1?serverTimezone=GMT%2b8
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    username: root
+    password: qyf123456
