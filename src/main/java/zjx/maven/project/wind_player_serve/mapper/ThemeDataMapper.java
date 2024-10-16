@@ -1,7 +1,7 @@
-package zjx.maven.project.learntest1.mapper;
+package zjx.maven.project.wind_player_serve.mapper;
 
 import org.apache.ibatis.annotations.Mapper;
-import zjx.maven.project.learntest1.model.ThemeData;
+import zjx.maven.project.wind_player_serve.model.ThemeData;
 
 import java.util.List;
 

@@ -1,4 +1,4 @@
-package zjx.maven.project.learntest1.model;
+package zjx.maven.project.wind_player_serve.model;
 
 import com.alibaba.excel.annotation.ExcelProperty;
 import com.alibaba.excel.annotation.write.style.ColumnWidth;

@@ -1,4 +1,4 @@
-package zjx.maven.project.learntest1;
+package zjx.maven.project.wind_player_serve;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;

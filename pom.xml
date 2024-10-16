@@ -9,7 +9,7 @@
         <relativePath/> <!-- lookup parent from repository -->
     </parent>
     <groupId>zjx.maven.project</groupId>
-    <artifactId>learnTest1</artifactId>
+    <artifactId>wind_player_serve</artifactId>
     <version>0.0.1-SNAPSHOT</version>
     <name>learnTest1</name>
     <description>learnTest1</description>

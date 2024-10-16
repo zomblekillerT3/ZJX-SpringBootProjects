@@ -5,11 +5,11 @@
 mybatis:
   config-location: classpath:mybatis-config.xml  #全局配置文件位置
   mapper-locations: classpath:mapper/*.xml  #sql映射文件位置
-  type-aliases-package: zjx.maven.project.learntest1.model
+  type-aliases-package: zjx.maven.project.wind_player_serve.model
 
 spring:
   datasource:
-    url: jdbc:mysql://localhost:3306/learnTest1?serverTimezone=GMT%2b8
+    url: jdbc:mysql://localhost:3306/wind_player_serve?serverTimezone=GMT%2b8
     driver-class-name: com.mysql.cj.jdbc.Driver
     username: root
     password: qyf123456

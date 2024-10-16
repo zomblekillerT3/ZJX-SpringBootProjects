@@ -1,7 +1,7 @@
-package zjx.maven.project.learntest1.service;
+package zjx.maven.project.wind_player_serve.service;
 
 import jakarta.servlet.http.HttpServletResponse;
-import zjx.maven.project.learntest1.model.ThemeData;
+import zjx.maven.project.wind_player_serve.model.ThemeData;
 
 import java.io.IOException;
 import java.util.List;

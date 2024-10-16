@@ -1,4 +1,4 @@
-package zjx.maven.project.learntest1.model;
+package zjx.maven.project.wind_player_serve.model;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;

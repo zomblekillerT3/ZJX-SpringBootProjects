@@ -1,10 +1,10 @@
-package zjx.maven.project.learntest1.controller;
+package zjx.maven.project.wind_player_serve.controller;
 
 import jakarta.servlet.http.HttpServletResponse;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
-import zjx.maven.project.learntest1.service.ThemeService;
+import zjx.maven.project.wind_player_serve.service.ThemeService;
 
 import java.io.IOException;
 

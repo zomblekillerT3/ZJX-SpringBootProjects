@@ -14,7 +14,7 @@
             <!-- 数据源：type-池类型的数据源 -->
             <dataSource type="POOLED">
                 <property name="driver" value="com.mysql.cj.jdbc.Driver" />
-                <property name="url" value="jdbc:mysql://localhost:3306/learnTest1?serverTimezone=GMT%2b8}" />
+                <property name="url" value="jdbc:mysql://localhost:3306/wind_player_serve?serverTimezone=GMT%2b8}" />
                 <property name="username" value="root" />
                 <property name="password" value="qyf123456" />
             </dataSource>
