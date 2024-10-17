@@ -9,7 +9,6 @@ import zjx.maven.project.wind_player_serve.model.ThemeData;
 public class TestController {
     @PostMapping("/test")
     public void test(@RequestBody ThemeData test) {
-        System.out.println(test.getId());
         System.out.println();
     }
 }

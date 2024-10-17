@@ -4,7 +4,26 @@
 
     <select id="getAll" resultType="zjx.maven.project.wind_player_serve.model.ThemeData">
         select *
-        from theme;
+        from total_theme;
+    </select>
+    <insert id="insert" parameterType="zjx.maven.project.wind_player_serve.model.ThemeData">
+        insert into total_theme(t_themeName)
+        values (#{t_themeName});
+    </insert>
+    <delete id="deleteByTid">
+        delete
+        from total_theme
+        where tid = #{tid}
+    </delete>
+    <update id="updateByTid" parameterType="zjx.maven.project.wind_player_serve.model.ThemeData">
+        update total_theme
+        set t_themeName = #{t_themeName}
+        where tid = #{tid}
+    </update>
+    <select id="getThemeDataByTid" resultType="zjx.maven.project.wind_player_serve.model.ThemeData">
+        select *
+        from total_theme
+        where tid = #{tid}
     </select>
 
 </mapper>

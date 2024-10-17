@@ -16,7 +16,6 @@ import java.util.List;
 @Service
 public class ThemeServiceImpl  implements ThemeService {
 
-
         @Autowired
         private ThemeDataMapper themeDataMapper;
 
@@ -29,16 +28,48 @@ public class ThemeServiceImpl  implements ThemeService {
         @Override
         public void export(HttpServletResponse response) throws IOException {
             OutputStream ops=response.getOutputStream();
-            // 设置响应头
+            // 设置响应类型
             response.setContentType("application/vnd.openxmlformats-officedocument.spreadsheetml.sheet");
+            //设置编码格式
             response.setCharacterEncoding("utf-8");
-
+            //设置URLEncoder.encode 防止中文乱码
             String fileName = URLEncoder.encode("主题", "UTF-8").replaceAll("\\+", "%20");
+            //设置响应头
             response.setHeader("Content-disposition", "attachment;filename*=utf-8''" + fileName + ".xlsx");
+            // 使用 EasyExcel 写出到响应输出流
             EasyExcel.write(ops,ThemeData.class).sheet("主题").doWrite(this::getall);
-
             ops.flush();
             ops.close();
         }
+    /*
+     新增数据
+     */
+    @Override
+    public ThemeData insert(ThemeData themeData) {
+    themeDataMapper.insert(themeData);
+    return themeData;
+    }
+    /*
+     修改数据
+     */
+    @Override
+    public int updateByTid(ThemeData themeData) {
+      return themeDataMapper.updateByTid(themeData);
 
     }
+    /*
+     通过主键删除数据
+     */
+    @Override
+    public int deleteByTid(int tid) {
+        return themeDataMapper.deleteByTid(tid);
+    }
+    /*
+    通过id查询数据
+     */
+    @Override
+    public ThemeData getThemeDataByTid(int id) {
+        return themeDataMapper.getThemeDataByTid(id);
+    }
+
+}

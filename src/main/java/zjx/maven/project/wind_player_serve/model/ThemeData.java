@@ -10,24 +10,24 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor
 @AllArgsConstructor
 public class ThemeData {
-    @ExcelProperty("ID")
+    @ExcelProperty("主题ID")
     @ColumnWidth(20)
-    private Long id;
+    private int tid;
 
     @ExcelProperty("主题名")
     @ColumnWidth(20)
-    private String themeName;
+    private String t_themeName;
 
     @ExcelProperty("图片地址")
     @ColumnWidth(20)
-    private String imgAddress;
+    private String t_imgAddress;
 
     @ExcelProperty("上下行背景")
     @ColumnWidth(20)
-    private String upDownBack;
+    private String t_upDownBack;
 
     @ExcelProperty("主要背景")
     @ColumnWidth(20)
-    private String mainBack;
+    private String t_mainBack;
 }
 
