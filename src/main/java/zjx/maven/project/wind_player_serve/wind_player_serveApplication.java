@@ -6,10 +6,10 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
 @MapperScan("zjx.maven.project.wind_player_serve.mapper")//扫描mapper的位置
-public class LearnTest1Application {
+public class wind_player_serveApplication {
 
     public static void main(String[] args) {
-        SpringApplication.run(LearnTest1Application.class, args);
+        SpringApplication.run(wind_player_serveApplication.class, args);
     }
 
 }

@@ -11,8 +11,8 @@
     <groupId>zjx.maven.project</groupId>
     <artifactId>wind_player_serve</artifactId>
     <version>0.0.1-SNAPSHOT</version>
-    <name>learnTest1</name>
-    <description>learnTest1</description>
+    <name>wind_player_serve</name>
+    <description>wind_player_serve</description>
     <url/>
     <licenses>
         <license/>
