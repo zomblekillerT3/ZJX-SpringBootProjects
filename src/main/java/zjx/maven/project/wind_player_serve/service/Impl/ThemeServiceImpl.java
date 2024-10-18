@@ -53,9 +53,9 @@ public class ThemeServiceImpl  implements ThemeService {
      删除数据
      */
     @Override
-    public String deleteByTid(int tid, String uid) {
-         themeDataMapper.deleteByTid(tid,uid);
-         return ("成功删除"+uid+","+tid);
+    public String deleteByTid(int tid, String creator) {
+         themeDataMapper.deleteByTid(tid, creator);
+         return ("成功删除"+ creator +","+tid);
     }
     /*
     通过id查询数据

@@ -12,7 +12,7 @@ public interface ThemeService {
 
     ThemeData insert(ThemeData themeData);
 
-    String deleteByTid(int tid,String uid);
+    String deleteByTid(int tid,String creator);
 
     ThemeData getThemeDataByTid(int id);
 }
