@@ -7,13 +7,13 @@
         from total_theme;
     </select>
     <insert id="insert" parameterType="zjx.maven.project.wind_player_serve.model.ThemeData">
-        insert into total_theme(t_themeName)
-        values (#{t_themeName});
+        insert into total_theme(t_themeName,t_upDownBack,t_mainBack,creator)
+        values (#{t_themeName},#{t_upDownBack},#{t_mainBack},#{creator});
     </insert>
     <delete id="deleteByTid">
         delete
         from total_theme
-        where tid = #{tid}
+        where tid = #{tid} and creator = #{uid}
     </delete>
     <update id="updateByTid" parameterType="zjx.maven.project.wind_player_serve.model.ThemeData">
         update total_theme

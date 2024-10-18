@@ -18,10 +18,6 @@ public class ThemeData {
     @ColumnWidth(20)
     private String t_themeName;
 
-    @ExcelProperty("图片地址")
-    @ColumnWidth(20)
-    private String t_imgAddress;
-
     @ExcelProperty("上下行背景")
     @ColumnWidth(20)
     private String t_upDownBack;
@@ -29,5 +25,9 @@ public class ThemeData {
     @ExcelProperty("主要背景")
     @ColumnWidth(20)
     private String t_mainBack;
+
+    @ExcelProperty("创建者")
+    @ColumnWidth(20)
+    private String uid;
 }
 

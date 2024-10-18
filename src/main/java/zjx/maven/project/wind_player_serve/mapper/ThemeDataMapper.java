@@ -19,7 +19,7 @@ public interface ThemeDataMapper {
     /*
     根据id删除主题
      */
-    int deleteByTid(int tid);
+    int deleteByTid(int tid,String uid);
     /*
     根据id查询主题
      */

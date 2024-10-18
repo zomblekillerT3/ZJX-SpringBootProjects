@@ -50,19 +50,12 @@ public class ThemeServiceImpl  implements ThemeService {
     return themeData;
     }
     /*
-     修改数据
+     删除数据
      */
     @Override
-    public int updateByTid(ThemeData themeData) {
-      return themeDataMapper.updateByTid(themeData);
-
-    }
-    /*
-     通过主键删除数据
-     */
-    @Override
-    public int deleteByTid(int tid) {
-        return themeDataMapper.deleteByTid(tid);
+    public String deleteByTid(int tid, String uid) {
+         themeDataMapper.deleteByTid(tid,uid);
+         return ("成功删除"+uid+","+tid);
     }
     /*
     通过id查询数据
