@@ -1,9 +1,7 @@
 package zjx.maven.project.wind_player_serve.controller;
 
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 import zjx.maven.project.wind_player_serve.model.UserToTheme;
 import zjx.maven.project.wind_player_serve.service.Result;
 import zjx.maven.project.wind_player_serve.service.UserToThemeService;
@@ -16,7 +14,7 @@ public class UserToThemeController {
     @Autowired
     private UserToThemeService userToThemeService;
 
-    @PostMapping("/check")
+    @GetMapping("/check")
     public Result check(String uid){
            if(userToThemeService.getByUid(uid) == null) {
                return new Result(userToThemeService.insert(uid));
