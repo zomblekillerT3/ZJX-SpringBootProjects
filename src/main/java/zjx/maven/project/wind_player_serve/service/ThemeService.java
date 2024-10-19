@@ -14,6 +14,6 @@ public interface ThemeService {
 
     String deleteByTid(int tid,String uid);
 
-    ThemeData getThemeDataByTid(int id);
+    ThemeData getThemeDataOne(ThemeData themeData);
 }
 

@@ -20,10 +20,10 @@
         set t_themeName = #{t_themeName}
         where tid = #{tid}
     </update>
-    <select id="getThemeDataByTid" resultType="zjx.maven.project.wind_player_serve.model.ThemeData">
+    <select id="getThemeDataOne" resultType="zjx.maven.project.wind_player_serve.model.ThemeData">
         select *
         from total_theme
-        where tid = #{tid}
+        where creator = #{creator} And t_themeName = #{t_themeName}
     </select>
 
 </mapper>

@@ -14,6 +14,7 @@ public class UserToThemeController {
     @Autowired
     private UserToThemeService userToThemeService;
 
+    //检查用户是否存在，不存在添加，存在返回err401
     @GetMapping("/check")
     public Result check(String uid){
            if(userToThemeService.getByUid(uid) == null) {
@@ -23,6 +24,7 @@ public class UserToThemeController {
                return new Result(USEREERROR,userToThemeService.getByUid(uid));}
         }
 
+    //用户更改主题
     @PostMapping("settheme")
     public Result update(UserToTheme userToTheme)throws Exception {
         try {

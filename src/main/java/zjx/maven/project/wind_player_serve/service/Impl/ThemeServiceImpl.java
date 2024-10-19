@@ -2,6 +2,7 @@ package zjx.maven.project.wind_player_serve.service.Impl;
 
 import com.alibaba.excel.EasyExcel;
 import jakarta.servlet.http.HttpServletResponse;
+import org.apache.poi.ss.formula.functions.T;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import zjx.maven.project.wind_player_serve.mapper.ThemeDataMapper;
@@ -61,8 +62,8 @@ public class ThemeServiceImpl  implements ThemeService {
     通过id查询数据
      */
     @Override
-    public ThemeData getThemeDataByTid(int id) {
-        return themeDataMapper.getThemeDataByTid(id);
+    public ThemeData getThemeDataOne(ThemeData themeData) {
+        return themeDataMapper.getThemeDataOne(themeData);
     }
 
 }

@@ -28,6 +28,6 @@ public class ThemeData {
 
     @ExcelProperty("创建者")
     @ColumnWidth(20)
-    private String uid;
+    private String creator;
 }
 

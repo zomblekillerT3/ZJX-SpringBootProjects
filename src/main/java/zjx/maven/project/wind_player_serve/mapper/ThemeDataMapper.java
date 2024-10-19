@@ -23,5 +23,5 @@ public interface ThemeDataMapper {
     /*
     根据id查询主题
      */
-    ThemeData getThemeDataByTid(int tid);
+    ThemeData getThemeDataOne(ThemeData themeData);
 }

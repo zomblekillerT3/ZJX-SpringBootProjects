@@ -8,6 +8,7 @@ public enum ResultCode implements StatusCode {
     FAILED(400,"请求失败"),
     USEREERROR(401,"用户已存在"),
     USERTOTHEMEERROR(402,"主题不存在"),
+    USERTHEMEERROR(403,"已存在相同的主题名"),
     TEST(10000,"test");
 
     private int code;
