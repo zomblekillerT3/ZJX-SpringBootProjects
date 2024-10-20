@@ -3,7 +3,7 @@ package zjx.maven.project.wind_player_serve.controller;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 import zjx.maven.project.wind_player_serve.model.ThemeData;
-import zjx.maven.project.wind_player_serve.service.Result;
+import zjx.maven.project.wind_player_serve.Exception.Result;
 import zjx.maven.project.wind_player_serve.service.ThemeService;
 
 @RestController
@@ -32,4 +32,8 @@ public class UserThemeController {
         themeService.getall();
         return new Result(themeService.getall());
     }
+    @GetMapping("/getpage")
+        public Result getPage(int page,int pageSize) {
+    return new Result(themeService.getThemeDataByPage(page,pageSize));
+        }
 }

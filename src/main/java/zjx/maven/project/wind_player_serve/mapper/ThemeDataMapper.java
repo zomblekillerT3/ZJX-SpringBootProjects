@@ -7,6 +7,9 @@ import java.util.List;
 
 @Mapper
 public interface ThemeDataMapper {
+    /*
+    查询所有主题
+     */
     List<ThemeData> getAll();
     /*
     插入新主题
@@ -19,9 +22,15 @@ public interface ThemeDataMapper {
     /*
     根据id删除主题
      */
-    int deleteByTid(int tid,String uid);
+    int deleteByTid(int tid,String creator);
     /*
     根据id查询主题
      */
     ThemeData getThemeDataByTid(int tid);
+    /*
+    分页查询
+     */
+    List<ThemeData> getThemeDataByPage(int limit, int offset);
+
+
 }

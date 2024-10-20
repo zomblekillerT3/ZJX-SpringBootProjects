@@ -15,5 +15,7 @@ public interface ThemeService {
     String deleteByTid(int tid,String creator);
 
     ThemeData getThemeDataByTid(int id);
+
+    List<ThemeData> getThemeDataByPage(int page, int pageSize);
 }
 

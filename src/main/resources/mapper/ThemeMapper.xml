@@ -13,7 +13,7 @@
     <delete id="deleteByTid">
         delete
         from total_theme
-        where tid = #{tid} and creator = #{uid}
+        where tid = #{tid} and creator = #{creator}
     </delete>
     <update id="updateByTid" parameterType="zjx.maven.project.wind_player_serve.model.ThemeData">
         update total_theme
@@ -24,6 +24,12 @@
         select *
         from total_theme
         where tid = #{tid}
+    </select>
+    <select id="getThemeDataByPage" resultType="zjx.maven.project.wind_player_serve.model.ThemeData">
+        select *
+        from total_theme
+        ORDER BY tid DESC
+        limit #{limit} offset #{offset}
     </select>
 
 </mapper>

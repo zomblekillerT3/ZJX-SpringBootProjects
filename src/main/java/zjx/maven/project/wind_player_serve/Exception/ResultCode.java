@@ -1,4 +1,4 @@
-package zjx.maven.project.wind_player_serve.service;
+package zjx.maven.project.wind_player_serve.Exception;
 
 import lombok.Getter;
 

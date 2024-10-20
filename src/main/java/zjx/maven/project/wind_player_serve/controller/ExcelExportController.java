@@ -14,8 +14,13 @@ public class ExcelExportController {
         @Autowired
         private ThemeService themeService;
         @GetMapping("/export")
-        public void get(HttpServletResponse response) throws IOException {
-            themeService.export(response);
+        public void getExportExcel(HttpServletResponse response) throws IOException {
+           try {
+                   themeService.export(response);
+           }catch (IOException e){
+               response.setStatus(HttpServletResponse.SC_INTERNAL_SERVER_ERROR);
+               response.getWriter().write("导出失败，请稍后重试。");
+           }
         }
 //    public void exportExcel(HttpServletResponse response) throws IOException {
 //        try {   // 设置响应类型

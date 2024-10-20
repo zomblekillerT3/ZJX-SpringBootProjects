@@ -38,7 +38,9 @@ public class ThemeServiceImpl  implements ThemeService {
             response.setHeader("Content-disposition", "attachment;filename*=utf-8''" + fileName + ".xlsx");
             // 使用 EasyExcel 写出到响应输出流
             EasyExcel.write(ops,ThemeData.class).sheet("主题").doWrite(this::getall);
+            //刷新输出流
             ops.flush();
+            //关闭输出流
             ops.close();
         }
     /*
@@ -64,5 +66,16 @@ public class ThemeServiceImpl  implements ThemeService {
     public ThemeData getThemeDataByTid(int id) {
         return themeDataMapper.getThemeDataByTid(id);
     }
+
+    @Override
+    public List<ThemeData> getThemeDataByPage(int page,int pageSize) {
+        if (page < 1) {
+            throw new IllegalArgumentException("页数必须大于等于1");
+        }
+        int limit = pageSize;
+        int offset = (page - 1) * pageSize;
+        return themeDataMapper.getThemeDataByPage(limit, offset);
+    }
+
 
 }

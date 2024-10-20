@@ -3,10 +3,10 @@ package zjx.maven.project.wind_player_serve.controller;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 import zjx.maven.project.wind_player_serve.model.UserToTheme;
-import zjx.maven.project.wind_player_serve.service.Result;
+import zjx.maven.project.wind_player_serve.Exception.Result;
 import zjx.maven.project.wind_player_serve.service.UserToThemeService;
 
-import static zjx.maven.project.wind_player_serve.service.ResultCode.*;
+import static zjx.maven.project.wind_player_serve.Exception.ResultCode.*;
 
 @RestController
 @RequestMapping("/usertotheme")
