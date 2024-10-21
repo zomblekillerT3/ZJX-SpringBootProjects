@@ -2,6 +2,7 @@ package zjx.maven.project.wind_player_serve.controller;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
+import zjx.maven.project.wind_player_serve.Exception.MyException;
 import zjx.maven.project.wind_player_serve.model.UserToTheme;
 import zjx.maven.project.wind_player_serve.Exception.Result;
 import zjx.maven.project.wind_player_serve.service.UserToThemeService;
@@ -20,16 +21,16 @@ public class UserToThemeController {
                return new Result(userToThemeService.insert(uid));
            }
         else{
-               return new Result(USEREERROR,userToThemeService.getByUid(uid));}
+               throw  new MyException(USEREERROR);}
         }
 
     @PostMapping("settheme")
-    public Result update(UserToTheme userToTheme)throws Exception {
+    public Result update(UserToTheme userToTheme) {
         try {
             userToThemeService.update(userToTheme);
                 return new Result(userToTheme);
         }catch (Exception e) {
-            return new Result(USERTOTHEMEERROR);
+            throw new MyException(USERTOTHEMEERROR);
         }
     }
 }

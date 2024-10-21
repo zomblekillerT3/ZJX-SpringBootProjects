@@ -15,7 +15,6 @@ public class UserController {
 
     @PostMapping("/login")
     public User login(@RequestBody User user) {
-       User dbuser = userMapper.getUserByNameAndPassword(user.getName(), user.getPassword());
-       return dbuser;
+        return userMapper.getUserByNameAndPassword(user.getName(), user.getPassword());
     }
 }
