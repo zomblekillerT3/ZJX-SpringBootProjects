@@ -29,5 +29,9 @@ public class ThemeData {
     @ExcelProperty("创建者")
     @ColumnWidth(20)
     private String creator;
+
+    @ExcelProperty("主题权重")
+    @ColumnWidth(20)
+    private String weight;
 }
 

@@ -8,4 +8,6 @@ public interface UserToThemeService {
     UserToTheme update(UserToTheme userToTheme);
 
     String insert(String uid);
+
+    int getByUidReturnTid(String uid);
 }

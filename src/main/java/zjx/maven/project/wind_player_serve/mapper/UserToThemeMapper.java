@@ -11,4 +11,6 @@ public interface UserToThemeMapper {
     int insert(String uid);
     //更改用户主题
     int update(UserToTheme userToTheme);
+
+    int getByUidReturnTid(String uid);
 }

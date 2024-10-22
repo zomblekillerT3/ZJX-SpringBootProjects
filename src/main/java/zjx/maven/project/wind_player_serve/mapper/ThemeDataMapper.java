@@ -31,6 +31,10 @@ public interface ThemeDataMapper {
     分页查询
      */
     List<ThemeData> getThemeDataByPage(int limit, int offset);
+    /*
+    根据权重表更改权重
+     */
+    int updateWeight(int num);
 
 
 }

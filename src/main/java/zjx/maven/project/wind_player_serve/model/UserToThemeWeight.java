@@ -7,7 +7,9 @@ import lombok.NoArgsConstructor;
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
-public class UserToTheme {
+public class UserToThemeWeight {
     private String uid;
     private int tid;
+    private int uToTNow;
+    private int uToTHistory;
 }

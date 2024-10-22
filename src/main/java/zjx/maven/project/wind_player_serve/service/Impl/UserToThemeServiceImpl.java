@@ -27,4 +27,8 @@ public class UserToThemeServiceImpl implements UserToThemeService {
         userToThemeMapper.insert(uid);
         return uid;
     }
+    @Override
+    public int getByUidReturnTid(String uid){
+        return(userToThemeMapper.getByUidReturnTid(uid));
+    }
 }

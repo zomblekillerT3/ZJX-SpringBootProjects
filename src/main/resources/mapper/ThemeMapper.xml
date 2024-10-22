@@ -31,5 +31,9 @@
         ORDER BY tid DESC
         limit #{limit} offset #{offset}
     </select>
+    <update id="updateWeight" parameterType="zjx.maven.project.wind_player_serve.model.ThemeData">
+        update total_name
+        set weight = (count(*) from userToThemeWeight where tid = #{tid} and )
+    </update>
 
 </mapper>

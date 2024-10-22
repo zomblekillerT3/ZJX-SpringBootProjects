@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="zjx.maven.project.wind_player_serve.mapper.UserToThemeWeightMapper">
+
+    <insert id="insert" parameterType="zjx.maven.project.wind_player_serve.model.UserToThemeWeight">
+        insert into userToThemeWeight(uid,tid)
+        values (#{uid},#{tid});
+    </insert>
+    <update id="updateByUidTidNow" parameterType="zjx.maven.project.wind_player_serve.model.UserToThemeWeight">
+        update userToThemeWeight
+        set uToTNow = #{setNum}
+        where uid = #{uid} and tid = #{tid}
+    </update>
+    <update id="updateByUidTidHistory" parameterType="zjx.maven.project.wind_player_serve.model.UserToThemeWeight">
+        update userToThemeWeight
+        set uToTHistory = #{setNum}
+        where uid = #{uid} and tid = #{tid}
+    </update>
+    <select id="getOnly" resultType="zjx.maven.project.wind_player_serve.model.UserToThemeWeight">
+        select *
+        from userToThemeWeight
+        where uid = #{uid} and tid = #{tid}
+    </select>
+</mapper>

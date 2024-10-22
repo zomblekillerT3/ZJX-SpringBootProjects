@@ -2,6 +2,11 @@
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="zjx.maven.project.wind_player_serve.mapper.UserToThemeMapper">
 
+    <select id="getByUidReturnTid" resultType="zjx.maven.project.wind_player_serve.model.UserToTheme">
+        select tid
+        from userToTheme
+        where uid = #{uid}
+    </select>
     <select id="getByUid" resultType="zjx.maven.project.wind_player_serve.model.UserToTheme">
         select *
         from userToTheme
